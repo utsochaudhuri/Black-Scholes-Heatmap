@@ -9,33 +9,35 @@ Inspiration taken from this project by Prudhvi Reddy (https://blackschole.stream
 
 The Black-Scholes-Merton model prices European-style options under certain assumptions (log-normal asset price distribution, constant volatility, and no dividends).  
 
-For a Call option price \( C \):
+For a Call option price (C):
 
-\[
-C = S N(d_1) - K e^{-rT} N(d_2)
-\]
+```math
+C = S \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
+```
 
-For a Put option price \( P \):
+For a Put option price (P):
 
-\[
-P = K e^{-rT} N(-d_2) - S N(-d_1)
-\]
+```math
+P = K \cdot e^{-rT} \cdot N(-d_2) - S \cdot N(-d_1)
+```
 
 Where:
-\[
-d_1 = \frac{\ln(S/K) + (r + \frac{\sigma^2}{2})T}{\sigma \sqrt{T}}
-\]
-\[
-d_2 = d_1 - \sigma \sqrt{T}
-\]
 
-**Variables:**
-- \( S \) = Spot price of the underlying asset
-- \( K \) = Strike price
-- \( T \) = Time to maturity (in years)
-- \( r \) = Risk-free interest rate (annual)
-- \( \sigma \) = Volatility of the underlying asset (annualized)
-- \( N(x) \) = Cumulative distribution function (CDF) of the standard normal distribution
+```math
+d_1 = \frac{\ln(S/K) + (r + \frac{\sigma^2}{2})T}{\sigma \sqrt{T}}
+```
+
+```math
+d_2 = d_1 - \sigma \sqrt{T}
+```
+
+**Parameters:**
+- S = Current stock price
+- K = Strike price  
+- r = Risk-free rate
+- T = Time to expiration
+- σ = Volatility
+- N(x) = Cumulative standard normal distribution function
 
 ---
 

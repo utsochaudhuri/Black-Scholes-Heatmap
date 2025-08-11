@@ -4,7 +4,6 @@
 This Python program calculates Call and Put option prices using the Black-Scholes-Merton (BSM) model and visualizes them in heatmap form over a range of spot prices and volatilities.  
 The program features an interactive GUI built with `tkinter`, allowing the user to input parameters, set ranges, and view results instantly.
 Inspiration taken from this project by Prudhvi Reddy (https://blackschole.streamlit.app/)
----
 
 ## Black-Scholes Formula
 
